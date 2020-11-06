@@ -19,6 +19,8 @@
 
 _Check out the firebase documentations for more details._
 
+![Screenshot](screenshot1.PNG)
+
 ---
 
 ## Available Scripts
