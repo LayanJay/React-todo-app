@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list-card{
+    position: relative;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #eee;
+    border-radius: 0.3rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    max-width: device-width;
+}
+
+.todo{
+    margin-right: 0.5rem;
+}
+
+.btn-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delete-btn{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(219, 219, 219);
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+}
+
+.delete-btn img{
+    width: 1.5rem;
+}
+
+.edit-btn{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(219, 219, 219);
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+}
+
+.edit-btn img{
+    width: 1.5rem;
+}
+
+.modal {
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.39);
+    transition: 0.3s ease;
+  }
+
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding: 0.4rem;
+    margin: 20% 0.5rem;
+    border: 1px solid #888;
+    border-radius: 0.3rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-todo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+}
+
+.edit-input{
+    padding: 0.4rem 0.4rem;
+    outline: none;
+    border: 2px solid #eee;
+    border-radius: 0.3rem;
+}
+
+.form-todo button{
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background-color: #eee;
+    cursor: pointer;
+    padding: 0.4rem 0.5rem;
+}
+
+.form-todo button img{
+    width: 1.5rem;
+}

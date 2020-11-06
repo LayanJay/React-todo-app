@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+    color: #eeeeee;
+    padding: 0.6rem 1rem;
+}
+
+.header img{
+    width: 2rem;
+}
+
+.header .name{
+    font-size: 1.1rem;
+}
