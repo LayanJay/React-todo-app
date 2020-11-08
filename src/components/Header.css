@@ -121,6 +121,7 @@
     border-radius: 0.3rem;
     color: #eee;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     transition: 0.2s ease;
 }
 
@@ -184,5 +185,6 @@
     border-radius: 0.3rem;
     color: #eee;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     transition: 0.2s ease;
 }

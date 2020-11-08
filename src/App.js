@@ -93,7 +93,12 @@ function App() {
         </div>
       ) : (
         // create the user interface
-        <div>you have to log in first</div>
+        <div className="homepage">
+          <div className="homepage__form">
+            <div className="homepage__greet1">Have a good day!</div>
+            <div className="homepage__greet2">It's time to have a plan.</div>
+          </div>
+        </div>
       )}
 
       <div className="footer">All Rights Reserved © | Designed by Layan</div>
