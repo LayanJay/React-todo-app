@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
-import db from "../firebase";
+import { db } from "../firebase";
 import "./Todo.css";
 
 function Todo(props) {
   const [input, setInput] = useState(props.todo.todo);
   const [isClicked, setIsClicked] = useState(false);
-  const inputRef = useRef();
 
   const deleteHandler = (e) => {
     db.collection("todos").doc(props.todo.id).delete();
@@ -23,7 +22,6 @@ function Todo(props) {
   };
 
   const focusHandler = () => {
-    inputRef.current.focus();
     setIsClicked(true);
   };
 
@@ -53,7 +51,6 @@ function Todo(props) {
             <form className="form-todo" noValidate autoComplete="off">
               <input
                 type="text"
-                ref={inputRef}
                 className="edit-input"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
