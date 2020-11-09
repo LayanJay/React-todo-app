@@ -5,13 +5,14 @@
 - Edit the added Todos
 - Realtime updates
 - Mobile responsive design
+- User login/signup function
 
 ---
 
 ## How to use
 
 - Fork and clone the project from GitHub.
-- Setup your [firebase](http://localhost:3000) project and get the config key.
+- Setup your [firebase](https://firebase.google.com/) project and get the config key.
 - Install the firebase command line tools to your PC by `npm i firebase -g`
 - If you already installed firebase in your PC, run `firebase init` in the command line inside the cloned directory.
 - Create the `firebase.js` file in the src folder and paste the firebase config variables into the file.
@@ -19,7 +20,7 @@
 
 _Check out the firebase documentations for more details._
 
-![Screenshot](screenshot1.PNG)
+![Screenshot](screenshot1.PNG) ![Screenshot](screenshot2.PNG)
 
 ---
 

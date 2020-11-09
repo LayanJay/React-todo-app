@@ -25,7 +25,7 @@ function App() {
     });
 
     //reading data from the database
-    db.collection("todos")
+    db.collection(username + "-todos")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         setTodo(
@@ -40,13 +40,13 @@ function App() {
       //cleanup process
       unsubscribe();
     };
-  }, [user]);
+  }, [user, username]);
 
   const addTodo = (event) => {
     //this will be fired when we clicked the button
     event.preventDefault();
 
-    db.collection("todos").add({
+    db.collection(username + "-todos").add({
       todo: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
@@ -59,8 +59,6 @@ function App() {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
-
-  console.log(user);
 
   return (
     <>
@@ -87,7 +85,7 @@ function App() {
           </form>
           <div className="list">
             {todos.map((todo) => (
-              <Todo key={todo.id} todo={todo} />
+              <Todo key={todo.id} todo={todo} username={username} />
             ))}
           </div>
         </div>

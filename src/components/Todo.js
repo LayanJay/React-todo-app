@@ -5,20 +5,22 @@ import "./Todo.css";
 function Todo(props) {
   const [input, setInput] = useState(props.todo.todo);
   const [isClicked, setIsClicked] = useState(false);
-  const [complete, setComplete] = useState(false);
-
   const deleteHandler = (e) => {
-    db.collection("todos").doc(props.todo.id).delete();
+    db.collection(props.username + "-todos")
+      .doc(props.todo.id)
+      .delete();
   };
 
   const editHandler = (e) => {
     e.preventDefault();
-    db.collection("todos").doc(props.todo.id).set(
-      {
-        todo: input,
-      },
-      { merge: true }
-    );
+    db.collection(props.username + "-todos")
+      .doc(props.todo.id)
+      .set(
+        {
+          todo: input,
+        },
+        { merge: true }
+      );
     setIsClicked(false);
   };
 
@@ -27,17 +29,8 @@ function Todo(props) {
   };
 
   return (
-    <div className="list-card" onClick={(e) => setComplete(!complete)}>
-      <div
-        style={
-          complete
-            ? { "text-decoration": "line-through" }
-            : { "text-decoration": "none" }
-        }
-        className="todo"
-      >
-        {props.todo.todo}
-      </div>
+    <div className="list-card">
+      <div className="todo">{props.todo.todo}</div>
       <div className="btn-div">
         <button className="delete-btn" onClick={deleteHandler}>
           <img
